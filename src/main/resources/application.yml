@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: hw002
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hw2
+    username: postgres
+    password: 123
+  jpa:
+   hibernate:
+     ddl-auto: update
+   properties:
+     hibernate:
+       show_sql: true
+       format_sql: true
