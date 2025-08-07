@@ -19,12 +19,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(ProductRequest request) {
-        Product product = Product.builder()
-                .name(request.getName().trim())
-                .price(request.getPrice())
-                .quantity(request.getQuantity())
-                .build();
-        return productRepository.createProduct(product);
+        return productRepository.createProduct(request.toEntity());
     }
 
     @Override

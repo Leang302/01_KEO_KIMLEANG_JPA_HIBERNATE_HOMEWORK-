@@ -66,7 +66,7 @@ public class ProductController {
                         .build()
         );
     }
-    //delete product
+
     @Operation(summary = "Delete product by product id")
     @DeleteMapping("{product-id}")
     public ResponseEntity<ApiResponse<Product>> deleteProductById(@PathVariable("product-id") Long productId){
@@ -90,7 +90,7 @@ public class ProductController {
                         .build()
         );
     }
-    //find product with qty filter
+
     @Operation(summary = "Get low stocks products")
     @GetMapping("/low-stock")
     public ResponseEntity<ApiResponse<List<Product>>> getLowStockProductByProductQuantity(@Positive @RequestParam Long quantity){

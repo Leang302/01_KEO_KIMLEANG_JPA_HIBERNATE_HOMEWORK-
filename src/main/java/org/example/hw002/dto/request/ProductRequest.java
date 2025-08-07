@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.hw002.model.entity.Product;
 
 @Data
 @AllArgsConstructor
@@ -27,4 +28,12 @@ public class ProductRequest {
     @NotNull(message = "Quantity must not be null")
     @Min(value = 0,message = "Quantity must be greater than or equal to 0")
     private Integer quantity;
+
+    public Product toEntity(){
+        return Product.builder()
+                .name(name)
+                .price(price)
+                .quantity(quantity)
+                .build();
+    }
 }
