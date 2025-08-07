@@ -85,7 +85,7 @@ public class ProductController {
         return ResponseEntity.ok(
                 ApiResponse.<List<Product>>builder()
                         .code(HttpStatus.OK)
-                        .payload(productService.getProductByProductName(name))
+                        .payload(productService.getProductByProductName(name.trim()))
                         .message("Product with name "+name+" fetched successfully.")
                         .build()
         );

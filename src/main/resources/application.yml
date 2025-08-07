@@ -2,7 +2,7 @@ spring:
   application:
     name: hw002
   datasource:
-    url: jdbc:postgresql://localhost:5432/hw2
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: 123
   jpa:
