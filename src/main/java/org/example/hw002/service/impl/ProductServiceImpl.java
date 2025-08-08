@@ -67,7 +67,7 @@ public class ProductServiceImpl implements ProductService {
 
         List<Product> productByProductName = productRepository.getProductByProductName(name);
         if(productByProductName.isEmpty()){
-            throw new NotFoundException("No products with name "+name+" not found.");
+            throw new NotFoundException("No products with name "+name+" found.");
         }
         return productByProductName;
     }

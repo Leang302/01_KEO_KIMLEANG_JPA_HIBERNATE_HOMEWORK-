@@ -23,6 +23,7 @@ public class ProductRequest {
     @Schema(description = "Product price", example = "10")
     @NotNull(message = "Price must not be null")
     @DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than or equal to 0")
+    @DecimalMax(value = "9999999999.99", message = "Price must be less than or equal to 9,999,999,999.99")
     private Double price;
     @Schema(description = "Product quantity", example = "100")
     @NotNull(message = "Quantity must not be null")
